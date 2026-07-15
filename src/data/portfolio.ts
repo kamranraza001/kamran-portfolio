@@ -7,14 +7,15 @@ export const portfolio = {
   about: 'I bring a practical, audit-based perspective to food safety, quality assurance and certification compliance. With 6+ years across manufacturing, supplier assessments and management-system auditing, I help teams reduce risk, close gaps and build systems that are ready for scrutiny.',
   email: 'kamranraza001@gmail.com',
   navigation: [
+    { label: 'Home', href: '#top' },
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
     { label: 'Expertise', href: '#skills' },
+    { label: 'Education', href: '#education' },
     { label: 'Credentials', href: '#certifications' },
     { label: 'Contact', href: '#contact' },
   ],
   credentials: ['ISO 22000 Lead Auditor', 'ISO 46001 Lead Auditor', 'Technical Halal Auditor'],
-  marquee: ['Food safety systems', 'Technical halal assurance', 'QA/QC operations', 'Regulatory compliance', 'Supplier audits', 'CAPA & improvement'],
   metrics: [
     { value: '6+', label: 'years in food safety, quality and compliance' },
     { value: 'ISO', label: '22000 and 46001 lead auditing credentials' },
@@ -26,10 +27,10 @@ export const portfolio = {
     { period: 'Audit focus', location: 'International', title: 'ISO Lead & Technical Halal Auditor', organization: 'ISO 22000, ISO 46001 and halal assurance systems', description: 'Conducted audit and certification-focused work involving management systems, halal requirements, non-conformity follow-up, CAPA and practical compliance readiness.' },
   ],
   skillGroups: [
-    { title: 'Audit & Assurance', skills: ['ISO 22000 auditing', 'ISO 46001 auditing', 'Technical halal auditing', 'Factory assessments', 'Supplier audits'] },
-    { title: 'Food Safety & Quality', skills: ['HACCP', 'GMP / GHP', 'QA/QC operations', 'Traceability', 'Risk assessment'] },
-    { title: 'Compliance Systems', skills: ['Regulatory compliance', 'OIC/SMIIC', 'GSO requirements', 'Documentation control', 'Certification readiness'] },
-    { title: 'Improvement Practice', skills: ['CAPA', 'Root-cause analysis', 'Non-conformance management', 'Quality training', 'Cross-functional collaboration'] },
+    { title: 'Food Safety', skills: ['HACCP', 'GMP / GHP', 'Traceability', 'Risk assessment', 'Factory assessments'] },
+    { title: 'QA/QC', skills: ['QA/QC operations', 'Supplier audits', 'Documentation control', 'Non-conformance follow-up', 'CAPA'] },
+    { title: 'Certification & Compliance', skills: ['ISO 22000 auditing', 'ISO 46001 auditing', 'Technical halal auditing', 'OIC/SMIIC', 'GSO requirements'] },
+    { title: 'Improvement Practice', skills: ['Root-cause analysis', 'Quality training', 'Cross-functional collaboration', 'Operational readiness', 'Continuous improvement'] },
   ],
   credentialIntroduction: 'A combination of lead-auditing credentials and hands-on quality experience, grounded in practical implementation rather than paperwork alone.',
   certifications: [

@@ -3,6 +3,18 @@ import { portfolio } from './data/portfolio'
 
 type Theme = 'light' | 'dark'
 
+function SectionTitle({ index, title, label }: { index: string; title: string; label: string }) {
+  return (
+    <div className="section-title">
+      <span>{index}</span>
+      <div>
+        <p>{label}</p>
+        <h2>{title}</h2>
+      </div>
+    </div>
+  )
+}
+
 function App() {
   const [theme, setTheme] = useState<Theme>(() => {
     const storedTheme = localStorage.getItem('kamran-theme')
@@ -34,7 +46,7 @@ function App() {
       </header>
 
       <main id="main-content">
-        <section className="hero section-grid" id="top">
+        <section className="hero" id="top">
           <div className="hero-copy reveal">
             <p className="eyebrow">{portfolio.availability}</p>
             <h1>{portfolio.heroTitle}</h1>
@@ -49,43 +61,56 @@ function App() {
           </div>
           <div className="hero-portrait reveal-delay">
             <div className="portrait-frame">
-              <img src="/profile-photo.jpg" alt="Illustrated portrait of Kamran Raza" width="754" height="1600" />
+              <img src="/profile-photo.png" alt="Illustrated portrait of Kamran Raza" width="754" height="1600" />
             </div>
-            <div className="portrait-note"><span>Based in</span><strong>{portfolio.location}</strong></div>
+            <div className="portrait-note">
+              <span>Based in</span>
+              <strong>{portfolio.location}</strong>
+            </div>
           </div>
         </section>
 
-        <section className="marquee" aria-label="Areas of expertise">
-          <div>{portfolio.marquee.map((item) => <span key={item}>{item} <b aria-hidden="true">+</b></span>)}</div>
-        </section>
-
-        <section className="section-grid about-section" id="about">
-          <div className="section-label"><span>01</span><p>About</p></div>
+        <section className="section-grid section-stack about-section" id="about">
+          <SectionTitle index="01" label="About" title="A practical profile built around trust, clarity and audit discipline." />
           <div className="section-content">
-            <p className="statement">{portfolio.about}</p>
-            <div className="metrics">
-              {portfolio.metrics.map((metric) => <div key={metric.label}><strong>{metric.value}</strong><span>{metric.label}</span></div>)}
+            <p className="statement statement-tight">{portfolio.about}</p>
+            <div className="metrics metrics-cards">
+              {portfolio.metrics.map((metric) => (
+                <article key={metric.label} className="metric-card">
+                  <strong>{metric.value}</strong>
+                  <span>{metric.label}</span>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="section-grid" id="experience">
-          <div className="section-label"><span>02</span><p>Experience</p></div>
+        <section className="section-grid section-stack" id="experience">
+          <SectionTitle index="02" label="Experience" title="A concise path through certification, auditing and quality systems." />
           <div className="section-content timeline">
             {portfolio.experience.map((role) => (
               <article className="timeline-item" key={role.title}>
-                <div className="timeline-meta"><span>{role.period}</span><span>{role.location}</span></div>
-                <div><h2>{role.title}</h2><p className="organization">{role.organization}</p></div>
+                <div className="timeline-meta">
+                  <span>{role.period}</span>
+                  <span>{role.location}</span>
+                </div>
+                <div>
+                  <h2>{role.title}</h2>
+                  <p className="organization">{role.organization}</p>
+                </div>
                 <p>{role.description}</p>
               </article>
             ))}
           </div>
         </section>
 
-        <section className="section-grid skills-section" id="skills">
-          <div className="section-label"><span>03</span><p>Expertise</p></div>
+        <section className="section-grid skills-section section-stack" id="skills">
+          <SectionTitle index="03" label="Expertise" title="What I do." />
           <div className="section-content">
-            <div className="skills-intro"><h2>Systems that hold up under scrutiny.</h2><p>Practical audit, quality and compliance expertise for organizations that need reliable standards in daily operations.</p></div>
+            <div className="skills-intro">
+              <h2>Systems that hold up under scrutiny.</h2>
+              <p>Practical audit, quality and compliance expertise for organizations that need reliable standards in daily operations.</p>
+            </div>
             <div className="skill-grid">
               {portfolio.skillGroups.map((group, index) => (
                 <article className="skill-card" key={group.title}>
@@ -98,27 +123,49 @@ function App() {
           </div>
         </section>
 
-        <section className="section-grid" id="certifications">
-          <div className="section-label"><span>04</span><p>Credentials</p></div>
+        <section className="section-grid section-stack" id="certifications">
+          <SectionTitle index="04" label="Credentials" title="Selected qualifications and recognition." />
           <div className="section-content credential-layout">
-            <div><h2>Qualifications with operational perspective.</h2><p>{portfolio.credentialIntroduction}</p></div>
+            <div>
+              <h2>Qualifications with operational perspective.</h2>
+              <p>{portfolio.credentialIntroduction}</p>
+            </div>
             <div className="credential-list">
-              {portfolio.certifications.map((certificate) => <article key={certificate.title}><span>{certificate.type}</span><h3>{certificate.title}</h3><p>{certificate.detail}</p></article>)}
+              {portfolio.certifications.map((certificate) => (
+                <article key={certificate.title}>
+                  <span>{certificate.type}</span>
+                  <h3>{certificate.title}</h3>
+                  <p>{certificate.detail}</p>
+                </article>
+              ))}
             </div>
           </div>
         </section>
 
-        <section className="section-grid" id="projects">
-          <div className="section-label"><span>05</span><p>Selected work</p></div>
+        <section className="section-grid section-stack" id="projects">
+          <SectionTitle index="05" label="Selected work" title="Examples of the kinds of work I support." />
           <div className="section-content project-grid">
-            {portfolio.projects.map((project, index) => <article className={`project-card project-${index + 1}`} key={project.title}><span>{project.category}</span><h2>{project.title}</h2><p>{project.description}</p><ul>{project.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul></article>)}
+            {portfolio.projects.map((project, index) => (
+              <article className={`project-card project-${index + 1}`} key={project.title}>
+                <span>{project.category}</span>
+                <h2>{project.title}</h2>
+                <p>{project.description}</p>
+                <ul>{project.outcomes.map((outcome) => <li key={outcome}>{outcome}</li>)}</ul>
+              </article>
+            ))}
           </div>
         </section>
 
-        <section className="section-grid" id="education">
-          <div className="section-label"><span>06</span><p>Education</p></div>
+        <section className="section-grid section-stack" id="education">
+          <SectionTitle index="06" label="Education" title="Academic background." />
           <div className="section-content education-list">
-            {portfolio.education.map((item) => <article key={item.degree}><span>{item.level}</span><h2>{item.degree}</h2><p>{item.focus}</p></article>)}
+            {portfolio.education.map((item) => (
+              <article key={item.degree}>
+                <span>{item.level}</span>
+                <h2>{item.degree}</h2>
+                <p>{item.focus}</p>
+              </article>
+            ))}
           </div>
         </section>
 
@@ -141,7 +188,10 @@ function App() {
         </section>
       </main>
 
-      <footer className="site-footer"><p>{portfolio.name} <span>/</span> Food Safety, Quality & Compliance</p><p>Built for clarity, credibility and connection.</p></footer>
+      <footer className="site-footer">
+        <p>{portfolio.name} <span>/</span> Food Safety, Quality & Compliance</p>
+        <p>Built for clarity, credibility and connection.</p>
+      </footer>
     </div>
   )
 }
