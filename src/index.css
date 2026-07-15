@@ -933,6 +933,118 @@ p {
   }
 }
 
+/* Custom Symbol-Heavy Styling */
+.hero-social-row {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.hero-social-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--line);
+  border-radius: 50%;
+  color: var(--muted);
+  background: transparent;
+  transition: all 0.25s ease;
+}
+
+.hero-social-badge:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+  background: color-mix(in srgb, var(--orange) 10%, transparent);
+  transform: translateY(-2px);
+}
+
+.timeline-bullets, .project-bullets {
+  list-style: none;
+  padding: 0;
+  margin: 1.25rem 0 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.timeline-bullets li, .project-bullets li {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--muted);
+  display: flex;
+  gap: 0.65rem;
+  align-items: flex-start;
+}
+
+.bullet-sym {
+  color: var(--orange);
+  font-family: var(--mono);
+  font-weight: bold;
+  user-select: none;
+}
+
+.skill-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.skill-icon {
+  color: var(--orange);
+  opacity: 0.9;
+}
+
+.skill-card h3 {
+  margin: 1rem 0 1.1rem !important;
+}
+
+.credential-item {
+  padding: 1.75rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.credential-item:last-child {
+  border-bottom: none;
+}
+
+.credential-icon-title {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+.cert-icon {
+  color: var(--orange);
+  margin-top: 0.35rem;
+  flex-shrink: 0;
+}
+
+.social-link-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--line);
+  border-radius: 2rem;
+  color: var(--muted);
+  transition: all 0.25s ease;
+}
+
+.social-link-badge:hover {
+  color: var(--orange);
+  border-color: var(--orange);
+  background: color-mix(in srgb, var(--orange) 8%, transparent);
+}
+
+@media (max-width: 650px) {
+  .hero-portrait::before, .hero-portrait::after {
+    display: none;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
