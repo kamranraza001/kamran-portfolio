@@ -349,6 +349,67 @@ p {
   font-size: 0.76rem;
 }
 
+.marquee {
+  overflow: hidden;
+  padding: 0.85rem 0;
+  color: var(--paper);
+  background: var(--orange);
+  white-space: nowrap;
+  border-bottom: 1px solid color-mix(in srgb, var(--orange-dark) 50%, transparent);
+}
+
+.marquee div {
+  display: inline-block;
+  min-width: 100%;
+  animation: scroll 28s linear infinite;
+}
+
+.marquee span {
+  font: 700 clamp(1rem, 1.8vw, 1.5rem) var(--serif);
+  letter-spacing: -0.03em;
+  margin-right: 1.2rem;
+}
+
+.marquee b {
+  color: color-mix(in srgb, var(--paper) 68%, transparent);
+  margin-left: 1.1rem;
+}
+
+.marquee:hover div {
+  animation-play-state: paused;
+}
+
+.marquee {
+  position: relative;
+}
+
+.marquee::before,
+.marquee::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 3rem;
+  z-index: 1;
+  pointer-events: none;
+}
+
+.marquee::before {
+  left: 0;
+  background: linear-gradient(to right, var(--orange), transparent);
+}
+
+.marquee::after {
+  right: 0;
+  background: linear-gradient(to left, var(--orange), transparent);
+}
+
+@keyframes scroll {
+  to {
+    transform: translateX(-12%);
+  }
+}
+
 .section-grid {
   display: grid;
   grid-template-columns: minmax(14rem, 0.62fr) minmax(0, 1.38fr);
@@ -365,6 +426,7 @@ p {
   display: flex;
   gap: 1rem;
   align-items: baseline;
+  padding-top: 0.2rem;
 }
 
 .section-title > span {
@@ -373,25 +435,11 @@ p {
   letter-spacing: 0.08em;
 }
 
-.section-title > div {
-  display: grid;
-  gap: 0.25rem;
-}
-
 .section-title p {
   margin: 0;
   color: var(--orange);
-  font: 0.68rem var(--mono);
-  letter-spacing: 0.14em;
-  text-transform: uppercase;
-}
-
-.section-title h2 {
-  margin: 0;
-  color: var(--ink);
-  font: 700 clamp(1.9rem, 3vw, 3rem) / 1.05 var(--serif);
-  letter-spacing: -0.04em;
-  max-width: 14ch;
+  font: 0.9rem var(--serif);
+  letter-spacing: -0.02em;
 }
 
 .section-content {

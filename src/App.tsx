@@ -3,14 +3,11 @@ import { portfolio } from './data/portfolio'
 
 type Theme = 'light' | 'dark'
 
-function SectionTitle({ index, title, label }: { index: string; title: string; label: string }) {
+function SectionTitle({ index, label }: { index: string; label: string }) {
   return (
     <div className="section-title">
       <span>{index}</span>
-      <div>
-        <p>{label}</p>
-        <h2>{title}</h2>
-      </div>
+      <p>{label}</p>
     </div>
   )
 }
@@ -100,8 +97,14 @@ function App() {
           </div>
         </section>
 
+        <section className="marquee" aria-label="Areas of expertise">
+          <div>
+            {portfolio.marquee.map((item) => <span key={item}>{item} <b aria-hidden="true">+</b></span>)}
+          </div>
+        </section>
+
         <section className="section-grid section-stack about-section" id="about">
-          <SectionTitle index="01" label="About" title="A practical profile built around trust, clarity and audit discipline." />
+          <SectionTitle index="01" label="About" />
           <div className="section-content">
             <p className="statement statement-tight">{portfolio.about}</p>
             <div className="metrics metrics-cards">
@@ -116,7 +119,7 @@ function App() {
         </section>
 
         <section className="section-grid section-stack" id="experience">
-          <SectionTitle index="02" label="Experience" title="A concise path through certification, auditing and quality systems." />
+          <SectionTitle index="02" label="Experience" />
           <div className="section-content timeline">
             {portfolio.experience.map((role) => (
               <article className="timeline-item" key={role.title}>
@@ -139,7 +142,7 @@ function App() {
         </section>
 
         <section className="section-grid skills-section section-stack" id="skills">
-          <SectionTitle index="03" label="Expertise" title="What I do." />
+          <SectionTitle index="03" label="Expertise" />
           <div className="section-content">
             <div className="skills-intro">
               <h2>Systems that hold up under scrutiny.</h2>
@@ -173,7 +176,7 @@ function App() {
         </section>
 
         <section className="section-grid section-stack" id="certifications">
-          <SectionTitle index="04" label="Credentials" title="Selected qualifications and recognition." />
+          <SectionTitle index="04" label="Credentials" />
           <div className="section-content credential-layout">
             <div>
               <h2>Qualifications with operational perspective.</h2>
@@ -197,7 +200,7 @@ function App() {
         </section>
 
         <section className="section-grid section-stack" id="projects">
-          <SectionTitle index="05" label="Selected work" title="Examples of the kinds of work I support." />
+          <SectionTitle index="05" label="Selected work" />
           <div className="section-content project-grid">
             {portfolio.projects.map((project, index) => (
               <article className={`project-card project-${index + 1}`} key={project.title}>
@@ -215,7 +218,7 @@ function App() {
         </section>
 
         <section className="section-grid section-stack" id="education">
-          <SectionTitle index="06" label="Education" title="Academic background." />
+          <SectionTitle index="06" label="Education" />
           <div className="section-content education-list">
             {portfolio.education.map((item) => (
               <article key={item.degree}>

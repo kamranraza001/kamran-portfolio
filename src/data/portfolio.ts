@@ -16,6 +16,7 @@ export const portfolio = {
     { label: 'Contact', href: '#contact' },
   ],
   credentials: ['ISO 22000 Lead Auditor', 'ISO 46001 Lead Auditor', 'Technical Halal Auditor'],
+  marquee: ['Food safety systems', 'QA/QC operations', 'Technical halal assurance', 'ISO 22000', 'ISO 46001', 'Regulatory compliance'],
   metrics: [
     { value: '6+', label: 'Years in food safety, QA/QC and compliance' },
     { value: 'ISO', label: '22000 and 46001 lead auditor credentials' },
