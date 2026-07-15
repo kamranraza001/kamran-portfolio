@@ -22,9 +22,27 @@ export const portfolio = {
     { value: 'Global', label: 'standards perspective across international markets' },
   ],
   experience: [
-    { period: 'Current', location: 'Taiwan / International', title: 'Certification, Quality & Compliance Professional', organization: 'BellCERT / GulfTIC / AFNOR Asia', description: 'Supporting certification and compliance work through audit coordination, standards interpretation, technical documentation and stakeholder communication.' },
-    { period: '6+ years', location: 'Manufacturing environments', title: 'Food Safety & Quality Assurance Specialist', organization: 'Food, cosmetics, pharmaceuticals and consumer goods', description: 'Strengthened QA/QC operations through food safety systems, factory assessments, traceability, documentation control, corrective actions and risk-based improvement.' },
-    { period: 'Audit focus', location: 'International', title: 'ISO Lead & Technical Halal Auditor', organization: 'ISO 22000, ISO 46001 and halal assurance systems', description: 'Conducted audit and certification-focused work involving management systems, halal requirements, non-conformity follow-up, CAPA and practical compliance readiness.' },
+    {
+      period: 'Current',
+      location: 'Taiwan / International',
+      title: 'Certification, Quality & Compliance Professional',
+      organization: 'BellCERT / GulfTIC / AFNOR Asia',
+      description: 'Supporting certification and compliance work through audit coordination, standards interpretation, technical documentation and stakeholder communication.',
+    },
+    {
+      period: '6+ years',
+      location: 'Manufacturing environments',
+      title: 'Food Safety & Quality Assurance Specialist',
+      organization: 'Food, cosmetics, pharmaceuticals and consumer goods',
+      description: 'Strengthened QA/QC operations through food safety systems, factory assessments, traceability, documentation control, corrective actions and risk-based improvement.',
+    },
+    {
+      period: 'Audit focus',
+      location: 'International',
+      title: 'ISO Lead & Technical Halal Auditor',
+      organization: 'ISO 22000, ISO 46001 and halal assurance systems',
+      description: 'Conducted audit and certification-focused work involving management systems, halal requirements, non-conformity follow-up, CAPA and practical compliance readiness.',
+    },
   ],
   skillGroups: [
     { title: 'Food Safety', skills: ['HACCP', 'GMP / GHP', 'Traceability', 'Risk assessment', 'Factory assessments'] },
@@ -40,9 +58,24 @@ export const portfolio = {
     { type: 'Professional Recognition', title: 'Taiwan Gold Card Holder', detail: 'International professional recognized for contribution and mobility in Taiwan.' },
   ],
   projects: [
-    { category: 'Food Safety Systems', title: 'FSMS audit readiness', description: 'Audit-led support for turning food safety requirements into controlled, traceable operating practices.', outcomes: ['ISO 22000 alignment', 'HACCP and GMP/GHP focus', 'CAPA follow-through'] },
-    { category: 'Water Efficiency', title: 'ISO 46001 audit engagement', description: 'Lead-audit work in the Mongolian mining sector, focused on water-efficiency management-system requirements.', outcomes: ['WEMS assessment', 'Evidence-based auditing', 'Operational compliance'] },
-    { category: 'Halal Compliance', title: 'Technical halal assurance', description: 'A focused approach to halal systems, documentation and certification preparedness for international markets.', outcomes: ['OIC/SMIIC knowledge', 'GSO requirements', 'Certification support'] },
+    {
+      category: 'Food Safety Systems',
+      title: 'FSMS audit readiness',
+      description: 'Audit-led support for turning food safety requirements into controlled, traceable operating practices.',
+      outcomes: ['ISO 22000 alignment', 'HACCP and GMP/GHP focus', 'CAPA follow-through'],
+    },
+    {
+      category: 'Water Efficiency',
+      title: 'ISO 46001 audit engagement',
+      description: 'Lead-audit work in the Mongolian mining sector, focused on water-efficiency management-system requirements.',
+      outcomes: ['WEMS assessment', 'Evidence-based auditing', 'Operational compliance'],
+    },
+    {
+      category: 'Halal Compliance',
+      title: 'Technical halal assurance',
+      description: 'A focused approach to halal systems, documentation and certification preparedness for international markets.',
+      outcomes: ['OIC/SMIIC knowledge', 'GSO requirements', 'Certification support'],
+    },
   ],
   education: [
     { level: 'Postgraduate', degree: 'M.Sc. Food Safety & Risk Management', focus: 'Advanced grounding in food safety systems, risk-based thinking and compliance.' },
