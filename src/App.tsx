@@ -61,7 +61,7 @@ function App() {
           </div>
           <div className="hero-portrait reveal-delay">
             <div className="portrait-frame">
-              <img src="/profile-photo.jpg" alt="Illustrated portrait of Kamran Raza" width="754" height="1600" />
+              <img src="/profile-photo.png" alt="Illustrated portrait of Kamran Raza" width="754" height="1600" />
             </div>
             <div className="portrait-note">
               <span>Based in</span>
@@ -116,9 +116,7 @@ function App() {
                 <article className="skill-card" key={group.title}>
                   <span className="card-number">0{index + 1}</span>
                   <h3>{group.title}</h3>
-                  <ul>
-                    {group.skills.map((skill) => <li key={skill}>{skill}</li>)}
-                  </ul>
+                  <ul>{group.skills.map((skill) => <li key={skill}>{skill}</li>)}</ul>
                 </article>
               ))}
             </div>
