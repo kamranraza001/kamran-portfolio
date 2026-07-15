@@ -5,7 +5,7 @@ export const portfolio = {
   heroTitle: 'Auditing systems. Strengthening trust.',
   shortIntroduction: 'ISO 22000 and ISO 46001 Lead Auditor, Technical Halal Auditor, and quality professional helping organizations turn standards into dependable day-to-day practice.',
   about: 'I bring a practical, audit-based perspective to food safety, quality assurance and certification compliance. With 6+ years across manufacturing, supplier assessments and management-system auditing, I help teams reduce risk, close gaps and build systems that are ready for scrutiny.',
-  email: 'kamran.raza@bellcert.tw',
+  email: 'kamranraza001@gmail.com',
   navigation: [
     { label: 'About', href: '#about' },
     { label: 'Experience', href: '#experience' },
