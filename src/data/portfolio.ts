@@ -50,5 +50,6 @@ export const portfolio = {
   contactIntro: 'For certification, audit, food safety, QA/QC or technical halal discussions, send a message or connect on LinkedIn.',
   socialLinks: [
     { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kamran-raza-766212145' },
+    { label: 'GitHub', url: 'https://github.com/kamranraza001' },
   ],
 }
