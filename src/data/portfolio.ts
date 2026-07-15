@@ -1,102 +1,132 @@
 export const portfolio = {
   name: 'Kamran Raza',
-  location: 'Taiwan | International',
-  availability: 'Food Safety / Quality / Compliance',
-  heroTitle: 'Auditing systems. Strengthening trust.',
-  shortIntroduction: 'ISO 22000 & 46001 Lead Auditor and Halal Auditor helping teams build compliant, audit-ready operations.',
-  about: 'I bring a practical, audit-based perspective to food safety, quality assurance, and certification compliance. I help organizations mitigate risk, resolve non-conformances, and establish dependable systems that stand up under regulatory scrutiny.',
+  monogram: 'KR',
+  eyebrow: 'Quality / Certification / Compliance',
+  professionalTitle:
+    'ISO 22000 & ISO 46001 Lead Auditor · Technical Halal Auditor',
+  heroTitle: 'Quality systems that stand up to scrutiny.',
+  shortIntroduction:
+    'I help organizations strengthen food safety, QA/QC, halal assurance, and regulatory compliance through rigorous audits and practical operational guidance.',
+  location: 'Taiwan · International',
   email: 'kamranraza001@gmail.com',
+  photo: '/profile-photo.png',
+  resumeUrl: '/resume.pdf',
   navigation: [
-    { label: 'Home', href: '#top' },
-    { label: 'About', href: '#about' },
+    { label: 'Profile', href: '#about' },
     { label: 'Experience', href: '#experience' },
-    { label: 'Expertise', href: '#skills' },
-    { label: 'Education', href: '#education' },
-    { label: 'Credentials', href: '#certifications' },
+    { label: 'Expertise', href: '#expertise' },
+    { label: 'Credentials', href: '#credentials' },
     { label: 'Contact', href: '#contact' },
   ],
-  credentials: ['ISO 22000 Lead Auditor', 'ISO 46001 Lead Auditor', 'Technical Halal Auditor'],
-  marquee: ['Food safety systems', 'QA/QC operations', 'Technical halal assurance', 'ISO 22000', 'ISO 46001', 'Regulatory compliance'],
+  socials: [
+    {
+      label: 'LinkedIn',
+      href: 'https://www.linkedin.com/in/kamran-raza-766212145',
+    },
+    { label: 'GitHub', href: 'https://github.com/kamranraza001' },
+  ],
   metrics: [
-    { value: '6+', label: 'Years in food safety, QA/QC and compliance' },
-    { value: 'ISO', label: '22000 and 46001 lead auditor credentials' },
-    { value: 'Global', label: 'Standards compliance across international markets' },
+    { value: '6+', label: 'Years across food safety, QA/QC, and compliance' },
+    { value: 'ISO', label: '22000 and 46001 Lead Auditor credentials' },
+    { value: 'Global', label: 'Audit and certification perspective across markets' },
+  ],
+  about: [
+    'I work at the intersection of audit, certification, and operations. My role is to determine whether a management system is not only documented, but credible, implemented, and capable of performing under scrutiny.',
+    'My background combines food safety and QA/QC practice, technical halal auditing, ISO 22000 and ISO 46001 lead-auditor capability, and an undergraduate foundation in Agricultural Engineering. This allows me to connect standards with the practical realities of manufacturing, resources, and supply chains.',
   ],
   experience: [
     {
       period: 'Current',
-      location: 'Taiwan / International',
+      location: 'Taiwan · International',
       title: 'Certification & Compliance Specialist',
-      organization: 'BellCERT / GulfTIC / AFNOR Asia',
-      bullets: [
-        'Coordinate international audits for ISO 22000, ISO 46001, and Halal certification.',
-        'Review technical files, verify corrective actions (CAPA), and audit compliance logs.',
-        'Interpret GSO, OIC/SMIIC, and regulatory standards for food and cosmetics.'
-      ]
+      organization: 'BellCERT · GulfTIC · AFNOR Asia',
+      summary:
+        'Coordinate certification and audit activities, review technical files and corrective actions, and interpret ISO, OIC/SMIIC, GSO, and market requirements for international clients.',
     },
     {
       period: '6+ years',
       location: 'Manufacturing',
       title: 'Food Safety & QA/QC Specialist',
-      organization: 'Food, Cosmetics & Pharma manufacturing',
-      bullets: [
-        'Supervised QA/QC operations, HACCP programs, and factory GMP compliance.',
-        'Conducted supplier and facility audits to ensure full traceability and control.',
-        'Managed CAPA systems, root-cause analysis, and non-conformance resolution.'
-      ]
+      organization: 'Food · Cosmetics · Pharmaceutical environments',
+      summary:
+        'Led practical quality controls, HACCP and GMP activities, traceability, CAPA, root-cause analysis, non-conformance resolution, and audit readiness across regulated operations.',
     },
     {
-      period: 'Audit focus',
+      period: 'Audit practice',
       location: 'International',
       title: 'ISO Lead & Technical Halal Auditor',
-      organization: 'ISO 22000, ISO 46001 & Halal systems',
-      bullets: [
-        'Assessed food safety and water efficiency management systems (WEMS).',
-        'Evaluated compliance with international halal standards (OIC/SMIIC).',
-        'Provided audit-readiness and technical conformity support to exporters.'
-      ]
-    }
+      organization: 'ISO 22000 · ISO 46001 · Halal assurance systems',
+      summary:
+        'Assess management-system effectiveness, water-efficiency controls, and halal conformity, including an ISO 46001 engagement in Mongolia’s mining sector.',
+    },
   ],
-  skillGroups: [
-    { title: 'Food Safety', skills: ['HACCP plans', 'GMP / GHP standards', 'Traceability tracking', 'Risk assessment', 'Facility audits'] },
-    { title: 'QA/QC Operations', skills: ['Supplier auditing', 'CAPA management', 'Root-cause analysis', 'Conformity checks', 'Documentation control'] },
-    { title: 'Certification & Compliance', skills: ['ISO 22000 (FSMS)', 'ISO 46001 (WEMS)', 'Technical Halal audits', 'OIC/SMIIC requirements', 'GSO standards'] },
-    { title: 'Improvement Practice', skills: ['Quality training', 'Operational readiness', 'Process optimization', 'Non-conformance correction', 'Compliance consulting'] }
+  expertise: [
+    {
+      title: 'Management-System Auditing',
+      items: ['ISO 22000 FSMS', 'ISO 46001 WEMS', 'Audit planning', 'CAPA verification'],
+    },
+    {
+      title: 'Food Safety & QA/QC',
+      items: ['HACCP', 'GMP / GHP', 'Risk assessment', 'Traceability and controls'],
+    },
+    {
+      title: 'Halal Certification',
+      items: ['Technical halal audits', 'OIC/SMIIC', 'GSO requirements', 'Export assurance'],
+    },
+    {
+      title: 'Regulatory Compliance',
+      items: ['Technical-file review', 'Conformity assessment', 'Non-conformance closure', 'Operational readiness'],
+    },
   ],
-  credentialIntroduction: 'Lead-auditing credentials and quality experience focused on practical operational compliance.',
-  certifications: [
-    { type: 'Lead Auditor', title: 'ISO 22000 Food Safety Management System', detail: 'Food safety systems auditing with a focus on risk-based, operational controls.' },
-    { type: 'Lead Auditor', title: 'ISO 46001 Water Efficiency Management System', detail: 'Auditing water efficiency management controls in heavy industrial and mining sectors.' },
-    { type: 'Technical Auditor', title: 'Halal Assurance & Certification Compliance', detail: 'Halal conformity auditing across OIC/SMIIC and GSO regional requirements.' },
-    { type: 'Professional Recognition', title: 'Taiwan Gold Card Holder', detail: 'Elite professional residency and mobility status recognized by the government.' }
+  credentials: [
+    {
+      type: 'Lead Auditor',
+      title: 'ISO 22000 Food Safety Management Systems',
+      description: 'Risk-based assessment of food-safety controls and management-system effectiveness.',
+    },
+    {
+      type: 'Lead Auditor',
+      title: 'ISO 46001 Water Efficiency Management Systems',
+      description: 'Assessment of water-efficiency controls in resource-intensive and industrial operations.',
+    },
+    {
+      type: 'Technical Auditor',
+      title: 'Halal Assurance & Certification Compliance',
+      description: 'Technical conformity assessment against OIC/SMIIC and GSO requirements.',
+    },
+    {
+      type: 'Professional Recognition',
+      title: 'Taiwan Employment Gold Card Holder',
+      description: 'International professional mobility and recognition in Taiwan.',
+    },
   ],
-  projects: [
+  selectedWork: [
     {
       category: 'Food Safety',
-      title: 'FSMS Audit Readiness',
-      description: 'Helped food manufacturing facilities achieve ISO 22000 certification.',
-      outcomes: ['Designed HACCP plan', 'GMP/GHP compliance audit', 'Implemented CAPA system']
+      title: 'FSMS audit readiness',
+      description: 'Supported ISO 22000 readiness through HACCP review, GMP/GHP assessment, and CAPA discipline.',
     },
     {
       category: 'Water Efficiency',
-      title: 'ISO 46001 Mining Audit',
-      description: 'Led water-efficiency audit engagement in the Mongolian mining sector.',
-      outcomes: ['Water-use assessments', 'Compliance reporting', 'Resource conservation']
+      title: 'ISO 46001 mining-sector audit',
+      description: 'Assessed water-use controls and management-system evidence for a major Mongolian mining operation.',
     },
     {
-      category: 'Halal Compliance',
-      title: 'Halal Export Assurance',
-      description: 'Supported certification compliance for export to international markets.',
-      outcomes: ['OIC/SMIIC alignment', 'GSO standards audit', 'Traceability verification']
-    }
+      category: 'Halal Assurance',
+      title: 'Export certification compliance',
+      description: 'Reviewed OIC/SMIIC and GSO alignment, technical documentation, and traceability for export markets.',
+    },
   ],
   education: [
-    { level: 'Postgraduate', degree: 'M.Sc. Food Safety & Risk Management', focus: 'Advanced training in food safety risk analysis, toxicology, and global compliance.' },
-    { level: 'Undergraduate', degree: 'B.Tech. Agricultural Engineering', focus: 'Engineering principles applied to agricultural processes, systems, and food production.' }
+    {
+      level: 'Postgraduate',
+      degree: 'M.Sc. Food Safety & Risk Management',
+      description: 'Advanced study in food-safety risk analysis, toxicology, and international compliance.',
+    },
+    {
+      level: 'Undergraduate',
+      degree: 'B.Tech. Agricultural Engineering',
+      description: 'Engineering foundations applied to agricultural processes, food production, and resource systems.',
+    },
   ],
-  contactIntro: 'For audit, compliance, QA/QC, or halal certification inquiries, send a message or connect on LinkedIn.',
-  socialLinks: [
-    { label: 'LinkedIn', url: 'https://www.linkedin.com/in/kamran-raza-766212145' },
-    { label: 'GitHub', url: 'https://github.com/kamranraza001' }
-  ]
 }
