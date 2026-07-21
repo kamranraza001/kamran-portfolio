@@ -1085,6 +1085,94 @@ h1 {
   }
 }
 
+
+/* Career Context Logos Styles */
+.career-context-section {
+  padding: 4rem clamp(1.25rem, 5vw, 6rem);
+  border-bottom: 1px solid var(--line);
+}
+
+.career-context-section h2 {
+  font-family: var(--serif);
+  font-size: 1.65rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+  letter-spacing: -0.03em;
+  color: var(--ink);
+}
+
+.career-context-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1.25rem;
+  margin-bottom: 1.75rem;
+}
+
+.career-context-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem 1.5rem;
+  background: var(--paper-deep);
+  border: 1px solid var(--line);
+  border-radius: 6px;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.career-context-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--orange);
+}
+
+.career-context-logo-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 56px;
+  width: 100%;
+  margin-bottom: 1.5rem;
+}
+
+.career-context-logo-wrap img {
+  max-width: 140px;
+  max-height: 48px;
+  object-fit: contain;
+}
+
+.career-context-info h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: var(--ink);
+}
+
+.career-context-info p {
+  font-size: 0.75rem;
+  color: var(--muted);
+  margin: 0;
+}
+
+.career-context-footnote {
+  font-size: 0.72rem;
+  color: var(--muted);
+  opacity: 0.85;
+  margin-top: 1.5rem;
+}
+
+@media (max-width: 900px) {
+  .career-context-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 520px) {
+  .career-context-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   html {
     scroll-behavior: auto;

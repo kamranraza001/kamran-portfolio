@@ -73,4 +73,30 @@ export const portfolio = {
     { level: 'Postgraduate', degree: 'M.Sc. Food Safety & Risk Management', description: 'Risk analysis and global compliance.' },
     { level: 'Undergraduate', degree: 'B.Tech. Agricultural Engineering', description: 'Engineering for food and resource systems.' },
   ],
+  careerContext: [
+    {
+      name: 'BellCERT',
+      subtitle: '貝爾國際驗證 (BellCERT)',
+      logo: '/logos/bellcert_logo.png',
+      context: 'Current auditing partner'
+    },
+    {
+      name: 'GulfTIC',
+      subtitle: 'GulfTIC Certification (UAE)',
+      logo: '/logos/gulftic_logo.png',
+      context: 'Halal & compliance partner'
+    },
+    {
+      name: 'AFNOR Asia',
+      subtitle: 'AFNOR Group (France/Asia)',
+      logo: '/logos/afnor_logo.png',
+      context: 'Standards & audit cooperation'
+    },
+    {
+      name: 'Fong Chen',
+      subtitle: '豐辰冷凍食品 (Fong Chen Co., Ltd.)',
+      logo: '/logos/fongchen_logo.png',
+      context: 'Former QA/QC employer'
+    }
+  ]
 }

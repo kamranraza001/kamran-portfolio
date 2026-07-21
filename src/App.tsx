@@ -159,6 +159,26 @@ function App() {
           </dl>
         </section>
 
+        <section className="career-context-section">
+          <h2>Career context</h2>
+          <div className="career-context-grid">
+            {portfolio.careerContext.map((company) => (
+              <div className="career-context-card" key={company.name}>
+                <div className="career-context-logo-wrap">
+                  <img src={company.logo} alt={`${company.name} logo`} />
+                </div>
+                <div className="career-context-info">
+                  <h4>{company.subtitle}</h4>
+                  <p>{company.context}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <p className="career-context-footnote">
+            Company names and marks identify professional context only; no endorsement is implied.
+          </p>
+        </section>
+
         <section className="section-shell" id="about">
           <SectionHeading index="01" label="Profile" title="Clear standards. Credible evidence." />
           <div className="about-copy">
